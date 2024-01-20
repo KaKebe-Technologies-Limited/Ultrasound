@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie and Privacy</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Cookie and Privacy</h1>
+    <p>This website uses cookies. Please review our <a href="privacy.html">Privacy Policy</a>.</p>
+    <button id="cookiePolicyBtn">Cookie Policy</button>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Check if the user has accepted the cookie policy
+    var cookieAcceptance = getCookie("cookieAcceptance");
+    if (cookieAcceptance === "") {
+        showCookiePolicyDialog();
+    }
+
+    // Handle the cookie policy button click
+    var cookiePolicyBtn = document.getElementById("cookiePolicyBtn");
+    cookiePolicyBtn.addEventListener("click", function() {
+        showCookiePolicyDialog();
+    });
+});
+
+// Get the value of a cookie by its name
+function getCookie(name) {
+    var cookieName = name + "=";
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        while (cookie.charAt(0) === " ") {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(cookieName) === 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+        }
+    }
+
+    return "";
+}
+
+// Set a cookie with a name, value, and expiration date
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+// Show the cookie policy dialog
+function showCookiePolicyDialog() {
+    var dialog = document.createElement("dialog");
+    dialog.id = "cookiePolicyDialog";
+    dialog.innerHTML = "<h2>Cookie Policy</h2><p>This website uses cookies to ensure you get the best experience. By clicking 'Accept', you consent to the use of all cookies.</p><button id='acceptCookiesBtn'>Accept</button>";
+
+    // Polyfill for dialog element (for cross-browser compatibility)
+    if (typeof dialog.showModal !== "function") {
+        dialogPolyfill.registerDialog(dialog);
+    }
+
+    dialog.showModal();
+
+    // Handle the accept button click
+    var acceptCookiesBtn = document.getElementById("acceptCookiesBtn");
+    acceptCookiesBtn.addEventListener("click", function() {
+        setCookie("cookieAcceptance", "accepted", 365);
+        dialog.close();
+    });
+}
+
+    </script>
+</body>
+</html>

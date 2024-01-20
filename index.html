@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ultrasound Africa .</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!--Slider-->
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="js/js-image-slider.js" type="text/javascript"></script>
+
+    <script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- reserverd -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <link rel="stylesheet"
+        href="Responsive-jQuery-Carousel-Slider-with-Slice-Transitions-indySliceSlider/css/indySliceSlider.css">
+    <script
+        src="Responsive-jQuery-Carousel-Slider-with-Slice-Transitions-indySliceSlider/js/jquery.indySliceSlider.js"></script>
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="chrometheme/chromestyle.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        @media (max-width: 736px) {
+
+            .nav .nav-links {
+                position: relative;
+                display: flex;
+                width: 100%;
+                background-color: black;
+                height: 53px;
+                left: 0px;
+                right: 0px;
+                float: right;
+                font-size: 8px;
+            }
+
+            .nav .nav-item {
+                font-size: 8px;
+            }
+
+            .nav .nav-links a {
+                /* display: flex; */
+                width: 100%;
+                display: block;
+                padding: 13px 3px 6px 3px;
+                font-size: 8px;
+            }
+
+            .nav>.nav-links>a:hover {
+                background-color: #5995da;
+                color: black;
+            }
+
+            .nav>#nav-check:not(:checked)~.nav-links {
+                height: 0px;
+            }
+
+            .nav>#nav-check:checked~.nav-links {
+                height: calc(100vh - 50px);
+                overflow-y: auto;
+            }
+
+            .mySection .ult img {
+                max-width: 150px;
+            }
+
+            .mySection .con {
+                margin-top: -20px;
+                margin-bottom: -20px;
+            }
+
+            .mySection .con i {
+                width: 2px;
+            }
+
+            .mySection .con p span {
+                font-size: 10px;
+            }
+
+            .slider img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+        }
+
+        @media (min-width: 736px) and (max-width: 960px) {
+            .nav>.nav-links {
+                position: relative;
+                display: flex;
+                width: 100%;
+                background-color: black;
+                height: 53px;
+                left: 0px;
+                right: 0px;
+                float: right;
+                font-size: 18px;
+            }
+
+            .nav>.nav-links>a {
+                /* display: flex; */
+                width: 100%;
+                display: block;
+                padding: 13px 3px 6px 3px;
+            }
+
+            .nav>.nav-links>a:hover {
+                background-color: rgb(9, 126, 199);
+                color: black;
+            }
+
+            .nav>#nav-check:not(:checked)~.nav-links {
+                height: 0px;
+            }
+
+            .nav>#nav-check:checked~.nav-links {
+                height: calc(100vh - 50px);
+                overflow-y: auto;
+            }
+
+            .mySection .ult img {
+                max-width: 200px;
+            }
+
+            .mySection .con {
+                margin-top: -10px;
+                margin-bottom: -20px;
+            }
+
+            .mySection .con i {
+                width: 5px;
+            }
+
+            .mySection .con p span {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    </div>
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <style>
+        #spinner {
+            animation: spin 8s linear infinite;
+        }
+    </style>
+    <!-- Spinner End -->
+    <!-- Navbar Start -->
+    <nav>
+        <div class="container-fluid">
+            <div class="first-content">
+                <div class="second-content">
+                    <img src="img/Latest Logo.jpg" width="300px" alt="">
+                </div>
+                <div class="second-content pt-3">
+                    <div class="third-content1">
+                        <i
+                            class="fa fa-envelope me-3"></i>info@ultrasoundafrica.org&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.
+                    </div>
+                    <div class="third-content">
+                        <i class="fa fa-phone-alt me-3"></i>+256 783716357, +256 701115606
+                    </div>
+                    <div class="forth-content">
+                        <p>
+                            <a href="https://facebook.com/groups/1890813627967607/"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/Ultrasound_afri?t=cPnzrT9qShOOoYNc_rRVPw&s=09"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/ultrasound-africa-225013275/"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/channel/UC0QNOcJ5zOd6OH6_oD5g1tA"><i
+                                    class="fab fa-youtube"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="ultrasound.html">Ultrasound CPD</a>
+                <a href="education.html">Education & Training</a>
+                <a href="outreach.html">Outreach</a>
+                <a href="research.html">Research</a>
+                <a href="accreditation.html">Accreditation & Protocols</a>
+                <a href="g.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+    </nav>
+    <nav>
+
+        <div class="nav">
+            <ul class="nav nav-tabs" style="background-color:rgb(9, 126, 199);">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#"
+                        style="background-color:rgb(9, 126, 199);">Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="future.html">Future Events</a></li>
+                        <li><a class="dropdown-item" href="past.html">Past Events</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" aria-current="page" href="http://oscarlincoln.pythonanywhere.com/" target="_blank">Monthly
+                        Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" aria-current="page" href="case.html">Monthly Case</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="newsletter.html" target="_blank">Newsletter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="register.html" target="_blank" tabindex="-1"
+                        aria-disabled="true">Login/Register</a>
+                </li>
+            </ul>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <div class="clr"></div>
+    <!-- slider -->
+    <!-- <div id="sliderFrame carouselExampleInterval" class="slideFrame carousel slide">
+    <div id="slider" class="slider carousel-inner">
+        <img class="carousel-item" src="gallery/Desktop - 6.jpg"/><img class="carousel-item" src="gallery/Desktop - 5.jpg" /><img class="carousel-item" src="gallery/Desktop - 4.jpg" />                         
+   </div>
+</div> -->
+    <div id="carouselExampleInterval" class="carousel slide mt-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/Desktop - 4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 6.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/Desktop - 7.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 8.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 9.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 10.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 11.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 12.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 13.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 14.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 15.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 16.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 17.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 19.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 20.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 21.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 22.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 23.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 25.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 26.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/Desktop - 27.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <!-- end of slider  -->
+
+    <!-- About Start -->
+    <div class="container-xxl">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative h-100" onload="onload();">
+                        <video id="myVideo" onended="onVideoEnded();" controls>
+                        </video>
+                        <script>
+                            var video_list = ["video.mp4", "gallery/video2.mp4"];
+                            var video_index = 0;
+                            var video_player = null
+
+                            function onload() {
+                                console.log('body loaded')
+                            }
+
+                            video_player = document.getElementById("myVideo");
+                            video_player.setAttribute("src", video_list[video_index]);
+                            video_player.play();
+
+                            function onVideoEnded() {
+                                console.log('video ended')
+                                if (video_index < video_list.length - 1) {
+                                    video_index++;
+                                } else {
+                                    video_index = 0;
+                                }
+                                video_player.setAttribute("src", video_list[video_index]);
+                                video_player.play();
+                            }
+                        </script>
+                        <style>
+                            video {
+                                width: 550px;
+                                height: 500px;
+                            }
+
+                            @media(max-width:736px) {
+                                video {
+                                    width: 340px;
+                                    height: 350px;
+                                    margin-bottom: -30px;
+                                }
+                            }
+                        </style>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 oscar wow fadeInUp" style="background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url('img/Desktop\ -\ 1.png');background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 70vh;">
+                    <h2 class="mb-1 mt-4">Welcome to Ultrasound Africa</h2>
+                    <p class="justify-text mb-4">Ultrasound Africa is a voluntary provider of Continuous Professional
+                        Development programmes and training in ultrasound to members of professional bodies and teaching
+                        institutions that are involved in the field of Radiology and Imaging. Our CPD and training
+                        sessions have impacted thousands of ultrasound practitioners since 2017.Our ultrasound research
+                        and outreach programmes are aimed at supporting quality healthcare delivery and informing policy
+                        in Africa, especially in resource constrained settings <br>The idea of supporting good quality healthcare delivery in low and middle
+                        income countries was born in 2017 by ultrasound practitioners in high income settings but with a
+                        background of low resource settings.We train qualified ultrasound practitioners in both basic
+                        and speciality sonography techniques.Our outreach programmes are designed to provide high
+                        quality ultrasound services voluntarily to low resource settings.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+<style>
+@media(max-width: 736px){
+.oscar{
+    margin-bottom: 220px;
+}
+}
+</style>
+
+    <!-- Categories Start -->
+    <div class="container-xxl category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <!-- <h6 class="section-title bg-white text-center text-primary px-3"> rgb(9, 126, 199)print</h6> -->
+                <h1 class="mb-5 oscar">Explore the greatness</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid img-prop" src="img/c.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                    style="margin: 1px;">
+                                    <h5 class="m-0">Community Outreach</h5>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid img-prop" src="picture/2.jpeg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                    style="margin: 1px;">
+                                    <h5 class="m-0">Research</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid img-prop" src="gallery/update4.png" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                    style="margin: 1px;">
+                                    <h5 class="m-0">Ultrasound CPD</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="picture/pic2.png" alt=""
+                            style="object-fit: cover;">
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                            style="margin:  1px;">
+                            <h5 class="m-0">Training</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- why we are liked by people  -->
+    <div class="container">
+        <h2 class="text-center mt-5">Why we are liked by people</h2>
+        <div class="content">
+            <div class="row mb-5 mt-5">
+                <div class="col-lg-8 col-sm-6">
+                    <ul>
+                        <li>Research centered
+                        </li>
+                        <li>Quality ultrasound education and training
+                        </li>
+                        <li>Community involvement
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <ul>
+                        <li> Specialist instructors
+                        </li>
+                        <li> Professional development
+                        </li>
+                        <li> Development of ultrasound <br> guidelines and protocols
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of why we are liked by people  -->
+
+    <!-- strength fact  -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center px-3" style="color:  rgb(9, 126, 199);">Facts</h6>
+                <!-- <h1 class="mb-5">Strength facts</h1> -->
+                <div class="container-xxl py-5">
+                    <div class="container">
+                        <div class="row g-4">
+                            
+                                <div class="col-lg-4 col-sm-6 wow fadeInUp service-item text-center" style="background-color: blue;" data-wow-delay="0.1s">
+                                    <p class="text-light">We have set up a vibrant committee of ultrasound practitioners
+                                        that develop and update protocols and guidelines for ultrasound practice</p>
+                                </div>
+                            
+                            
+                                <div class="col-lg-4 col-sm-6 wow fadeInUp service-item text-center bg-primary" data-wow-delay="0.3s">
+                                    <p class="text-light">Our specialist ultrasound educators are highly qualified and
+                                        bring on board extensive experience in the field of ultrasound imaging.</p>
+                                </div>
+                       
+                                <div class="col-lg-4 col-sm-6 wow fadeInUp service-item text-center" data-wow-delay="0.5s"
+                                    style="padding-bottom: 80px; background-color:blue;">
+                                    <p class="text-light">We introduce new ultrasound imaging techniques to trainees in
+                                        health facilities in resource limited settings</p>
+
+                                </div>
+                        
+                            
+                                <div class="col-lg-6 col-sm-6 wow fadeInUp service-item text-center" style="background-color: rgb(12, 12, 122);" data-wow-delay="0.7s">
+                                    <p class="text-light">Through our CPD programs we equip professionals with the
+                                        knowledge, practical skills, resources, and offer them the support they need to
+                                        provide high quality patient care through ultrasound imaging. We have impacted
+                                        thousands of ultrasound practitioners in the African region and beyond
+                                        between 2017 and 2023</p>
+                                </div>
+                          
+                                <div class="col-lg-6 col-sm-6 wow fadeInUp service-item text-center" style="background-color: rgb(35, 45, 102);" data-wow-delay="0.7s">
+                                    <p class="text-light">We aim at quality improvement of ultrasound practice by
+                                        developing a vibrant community of practice in research, linking students and
+                                        researchers
+                                        through a central research hub and providing access to information and
+                                        dissemination of
+                                        research findings related to the field of ultrasound.</p>
+                                </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @media(max-width:736px) {
+            .service-item p {
+                text-align: left;
+            }
+        }
+    </style>
+    <!-- end of strength fact  -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center px-3" style="color:  rgb(9, 126, 199);">Testimonial</h6>
+                <h1 class="mb-5">What others say about us</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="gallery/update1.png"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0"> Dr Constance Nakamya, Uganda</h5>
+                    <p>Doctor</p>
+                    <div class="testimonial-text  text-center p-4">
+                        <p class="mb-0">I attended the ultrasound sessions organized by Ultrasound Africa/UltrasoundCPD
+                            Education during my Postgraduate Sonography Training and these were extremely very helpful.
+                            I was able to excel in my training, thanks to Ultrasound Africa.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="gallery/update2.png"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Vusile Gay Mabilisa </h5>
+                    <p>Medical Imaging- Sonographer
+                        Mbabane Government Hospital, Eswatini
+                    </p>
+                    <div class="testimonial-text  text-center p-4">
+                        <p class="mb-0">Very helpful webinars</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="gallery/update3.png"
+                        style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Brave Kadoko Nyirenda</h5>
+                    <p>Medical Imaging Technologist
+                        Mzuzu Central Hospital (Malawi)
+                    </p>
+                    <div class="testimonial-text  text-center p-4">
+                        <p class="mb-0">Very educative webinar sessions. Thankyou Ultrasound Africa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Cookie start  -->
+    <div class="cookie_box" id="cookie_box">
+        <img src="" alt="">
+        <h3>Cookie Policy</h3>
+        <p>This site cookies on your browser and disclose information in accordance with our cookie policy</p>
+        <button id="activeButton" type="submit">Accept</button>
+    </div>
+    <style>
+        .cookie_box {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 400px;
+            padding: 20px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #cookie_box {
+            display: block;
+        }
+
+        .cookie_box img {
+            width: 70px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 30px;
+        }
+
+        .cookie_box h3 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .cookie_box button {
+            padding: 8px 25px;
+            background: #027cb7;
+            color: white;
+            font-size: 18px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+        }
+
+        .cookie_box button:focus {
+            background: #054d6f;
+        }
+    </style>
+    <script>
+        document.getElementById("activeButton").addEventListener("click", function () {
+            var cookie_box = document.getElementById("cookie_box");
+            cookie_box.style.display = "none";
+            localStorage.setItem("propertyHidden", "true");
+        });
+        window.addEventListener("load", function () {
+            var propertyHidden = localStorage.getItem("propertyHidden");
+            if (propertyHidden === "true") {
+                var propertyDiv = document.getElementById("cookie_box");
+                propertyDiv.style.display = "none";
+            }
+        });
+    </script>
+    <!-- end of cookie  -->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Contact us</h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10"> P.O BOX 114164 Kampala, Uganda.</p>
+                    <style>
+                        @media(max-width:736px) {
+                            .mb10 {
+                                text-align: center;
+                            }
+
+                            .footer_ul_amrc {
+                                text-align: center;
+                            }
+                        }
+                    </style>
+
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">What we do</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="ultrasound.html"> Ultrasound CPD</a></li>
+                        <li><a href="education.html"> Education and Training</a></li>
+                        <li><a href="outreach.html">Outreach</a></li>
+
+                    </ul>
+
+                    <!--footer_ul_amrc ends here-->
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">What we do</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc text-left">
+                        <li><a href="research.html"> Research</a></li>
+                        <li><a href="accreditation.html"> Accreditation, guidelines and protocols</a></li>
+                        <li><a href="g.html">Gallery </a></li>
+
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                    <!--headin5_amrc ends here-->
+
+                    <ul class="footer_ul2_amrc">
+                        <p><i class="fa fa-phone"></i> +256 701115606</p>
+                        <p><i class="fa fa-phone"></i>+256 783716357</p>
+                        <p><i class="fa fa fa-envelope"></i>info@ultrasoundafrica.org</p>
+                    </ul>
+                    <!--footer_ul2_amrc ends here-->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="text-center">Privacy and Cookie Policy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terms and
+                Conditions</p>
+
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">&copy;TALEV Ultrasound Africa Ltd 2023 | Designed by <a href="#"
+                    style="color: rgb(9, 126, 199);">Kakebe Technologies</a></p>
+
+
+
+
+            <ul class="social_footer_ul">
+                <li><a href="https://www.youtube.com/channel/UC0QNOcJ5zOd6OH6_oD5g1tA"><i
+                            class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ultrasound-africa-225013275/"><i
+                            class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://twitter.com/Ultrasound_afri?t=cPnzrT9qShOOoYNc_rRVPw&s=09"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="https://facebook.com/groups/1890813627967607/"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+
+    </footer>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <button class="btn btn-lg back-to-chat" style="background-color: rgb(9, 126, 199);color:white;">Chat</button>
+
+    <!--  <button class="btn btn-lg back-to-chat" style="background-color: rgb(9, 126, 199);color:white;">Chat</button> -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

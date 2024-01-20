@@ -1,0 +1,182 @@
+  .con{
+    margin-right: 10px;
+   }
+   .ult{
+    margin-left: 10px;
+   }
+  .nav {
+    height: 53px;
+    width: 100%;
+    background-color: rgb(4, 4, 82);
+    position: relative;
+    justify-content: center;
+    
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+   
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color:  rgb(9, 126, 199);
+    color: white;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  @media (max-width: 736px) {
+    .nav .nav-links {
+      position: relative;
+      display: flex;
+      width: 100%;
+      background-color: black;
+      height: 53px;
+      left: 0px;
+      right: 0px;
+      float: right;
+      font-size: 8px;
+    }
+    .nav .nav-links a {
+      /* display: flex; */
+      width: 100%;
+      display: block;
+      padding: 13px 3px 6px 3px;
+      font-size: 8px;
+    }
+    .nav > .nav-links > a:hover {
+        background-color:  rgb(9, 126, 199);
+        color: white;
+      }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    .mySection .ult img{
+        max-width: 150px;
+    }
+    .mySection .con{
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+    .mySection .con i{
+        width: 2px;
+    }
+    .mySection .con p span{
+        font-size: 10px;
+    }
+    
+  }
+  @media (min-width: 736px) and (max-width: 960px){
+    
+    .nav > .nav-links {
+      position: relative;
+      display: flex;
+      width: 100%;
+      background-color: black;
+      height: 53px;
+      left: 0px;
+      right: 0px;
+      float: right;
+      font-size: 18px;
+    }
+    .nav > .nav-links > a {
+      /* display: flex; */
+      width: 100%;
+      display: block;
+       padding: 13px 3px 6px 3px;
+    }
+    .nav > .nav-links > a:hover {
+        background-color:  rgb(9, 126, 199);
+        color: black;
+      }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    .mySection .ult img{
+        max-width: 200px;
+    }
+    .mySection .con{
+        margin-top: -10px;
+        margin-bottom: -20px;
+    }
+    .mySection .con i{
+        width: 5px;
+    }
+    .mySection .con p span{
+        font-size: 13px;
+    }
+  }
+
+  .first-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.second-content .third-content1{
+    text-align: right;
+}
+.second-content .third-content{
+    text-align: right;
+}
+.forth-content{
+                    text-align: right;
+                }
+                .forth-content p{
+                    padding-right: 40px;
+                }
+                .forth-content p a{
+                    padding-left: 20px;
+                }
+@media (max-width: 736px){
+  .first-content .second-content img{
+    margin-top: 20px;
+    width: 120px;
+    }
+    .second-content img{
+        max-width: 100px;
+        margin-top: 10px;
+    }
+    .second-content .third-content1{
+        font-size: 8px;
+        
+    }
+    .second-content .third-content{
+        font-size: 8px;
+        margin-bottom: 10px;
+        
+    }
+    .second-content{
+        padding-left: 20px;
+    }
+    .forth-content{
+  font-size: 10px;
+}
+    .nav .nav-item{
+      font-size: 8px;
+  }
+  ul li .dropdown-item{
+    font-size: 8px;
+  }
+}
+.dropdown-menu .dropdown-item:hover{
+  background-color:  rgb(9, 126, 199);
+  color: white;
+}
+  
